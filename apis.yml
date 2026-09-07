@@ -1,17 +1,37 @@
 aid: adarga
 name: Adarga
-description: 'Adarga is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Adarga is a British artificial-intelligence software company, founded
+  in London in 2016 by Rob Bassett Cross, that builds information-intelligence and
+  decision-advantage software for Defence, National Security and Resilience customers.
+  Its products include Adarga Vantage, an AI analysis platform that extracts, contextualises
+  and connects information from millions of internal and external sources in more than
+  75 languages; Adarga Augur, an alerting and intelligence tool; and Catalyst, a multidomain
+  data-fusion and developer platform that the company markets as a Sovereign AI Stack.
+  Adarga sells to the UK Ministry of Defence and Strategic Command and to US federal
+  customers, and partners with Oracle to run Vantage on Oracle Cloud Infrastructure.
+  Adarga publishes no public developer portal, API documentation, or machine-readable
+  API contract; its product documentation sits behind a customer support portal.'
 url: https://raw.githubusercontent.com/api-evangelist/adarga/refs/heads/main/apis.yml
+image: http://static1.squarespace.com/static/69b8196e37339d1a13c7da39/t/69b81b862863403cb2492195/1773673350751/Adarga_White_16x9.gif?format=1500w
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-09-07'
 modified: '2026-09-07'
+position: Producing
 tags:
 - Company
+- Artificial Intelligence
+- Defense
+- National Security
+- Intelligence
+- Analytics
+- Natural Language Processing
+- Data Fusion
+- Machine Learning
+- United Kingdom
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +39,60 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adarga-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/adarga
+  url: https://www.adarga.ai/
+- type: About
+  url: https://www.adarga.ai/about
+- type: Solutions
+  url: https://www.adarga.ai/solution
+- type: CaseStudies
+  url: https://www.adarga.ai/case-studies
+- type: Blog
+  url: https://www.adarga.ai/news
+- type: BlogRSS
+  url: https://www.adarga.ai/news?format=rss
+- type: Support
+  url: https://support.adarga.ai/support/home
+- type: PrivacyPolicy
+  url: https://www.adarga.ai/privacy
+- type: GitHubOrganization
+  url: https://github.com/adarga-ai
+- type: LinkedIn
+  url: https://uk.linkedin.com/company/adargaai
+- type: Careers
+  url: https://adarga.recruitee.com/
+- type: Packages
+  url: packages/adarga-packages.yml
+- type: Plans
+  url: plans/adarga-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/adarga-llms.txt
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Adarga markets Catalyst as "The Developer Platform" where customers build
+    "agents, tools and APIs", but the only documentation surface is a
+    Freshservice customer portal at support.adarga.ai whose category list is
+    public while every article folder returns HTTP 401 Unauthorized to an
+    anonymous reader, and adarga.ai itself is a 14-page Squarespace estate with
+    no developer section.
+  evidence:
+  - url: https://support.adarga.ai/support/solutions/folders/51000033057
+    status: 401
+  - url: https://support.adarga.ai/api/_/solutions/categories
+    status: 403
+  - url: https://www.adarga.ai/sitemap.xml
+    status: 200
+  - url: https://www.adarga.ai/openapi.json
+    status: 404
+  - url: https://www.adarga.ai/.well-known/agent-card.json
+    status: 404
+  checked: '2026-09-07'

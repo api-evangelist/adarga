@@ -1,0 +1,105 @@
+name: Adarga Well-Known Discovery Documents
+description: >-
+  Probe of the RFC 8615 /.well-known/ namespace on every host the Adarga record
+  knows. Adarga publishes no API, so there are no API baseURL or OpenAPI
+  servers[] hosts to probe; the hosts below are the registrable domain, its www
+  host, and the customer support portal. Every path returned 404 (or a 301 to
+  www on the apex), so no WellKnown or SecurityTxt pointer is wired into
+  apis.yml — this file records a measured absence, not a served surface.
+generated: '2026-09-07'
+method: probed
+source: >-
+  Direct unauthenticated HTTPS GETs from the enrichment pipeline, 2026-09-07,
+  browser User-Agent.
+hosts:
+- host: www.adarga.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: adarga.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+    note: Apex 301-redirects every path to https://www.adarga.ai/ ; see the www host.
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+- host: support.adarga.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+notes:
+- >-
+  www.adarga.ai/.well-known/security.txt returns HTTP 404 with a JSON body
+  {"message":"security.txt not found"} — Squarespace's own handler, not a
+  provider-authored document.
+- >-
+  All other 404s on www.adarga.ai return the Squarespace HTML 404 page, so no
+  path is a soft-200 false positive.
+- >-
+  Subdomains observed in Certificate Transparency (workbench.adarga.ai,
+  demo.adarga.ai, dev.adarga.ai and similar) do not resolve in public DNS and
+  were not probed further.

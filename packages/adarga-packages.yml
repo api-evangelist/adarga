@@ -1,0 +1,86 @@
+name: Adarga Packages
+description: >-
+  First-party software packages published by Adarga. Adarga ships no public API
+  and therefore no API client SDK; everything it publishes openly is internal
+  platform tooling released from the github.com/adarga-ai organisation as Go
+  modules. Every entry below is resolvable through proxy.golang.org, and each
+  carries the version and release date the module proxy reports. Four of the six
+  public repositories in the organisation are archived. No `type: SDKs` pointer
+  is wired into apis.yml: none of these packages is a client library for an
+  Adarga API, and claiming otherwise would credit Adarga with an SDK it does not
+  publish.
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://github.com/adarga-ai (organisation listing, HTTP 200, 2026-09-07) plus
+  https://proxy.golang.org/<module>/@latest for version and publication date.
+  npm, PyPI, RubyGems, crates.io, NuGet, Maven Central and Packagist were all
+  searched for first-party Adarga packages and returned none — the npm package
+  named `adarga` (1.0.14, 2025-08-04) is unrelated third-party work
+  ("Shields assets for smix", maintainers ogbertal/ramyromeo, no repository).
+packages:
+- name: github.com/adarga-ai/flyte-workflow-registration-operator
+  registry: go
+  official: true
+  api_client: false
+  language: Go
+  version: v1.0.0
+  published: '2025-01-14'
+  repository: https://github.com/adarga-ai/flyte-workflow-registration-operator
+  description: A Kubernetes operator to register Flyte workflows using GitOps.
+  archived: false
+- name: github.com/adarga-ai/go-tigergraph
+  registry: go
+  official: true
+  api_client: false
+  language: Go
+  version: v0.1.0
+  published: '2023-06-14'
+  repository: https://github.com/adarga-ai/go-tigergraph
+  description: >-
+    A Go client for TigerGraph, with a migration runner. A client for a
+    third-party graph database, not for an Adarga API.
+  archived: true
+- name: github.com/adarga-ai/kafka-topic-operator
+  registry: go
+  official: true
+  api_client: false
+  language: Go
+  version: v0.0.0-20230216095635-5f80ba5abfd4
+  published: '2023-02-16'
+  repository: https://github.com/adarga-ai/kafka-topic-operator
+  description: >-
+    An operator for managing Kafka topics. Untagged — the module proxy resolves
+    only a pseudo-version from the default branch.
+  archived: true
+- name: github.com/adarga-ai/pachyderm-pipeline-controller
+  registry: go
+  official: true
+  api_client: false
+  language: Go
+  version: v0.0.0-20210624220138-4ca9e167f20e
+  published: '2021-06-24'
+  repository: https://github.com/adarga-ai/pachyderm-pipeline-controller
+  description: >-
+    A Kubernetes operator for controlling Pachyderm Pipeline objects. Untagged —
+    pseudo-version only.
+  archived: true
+excluded:
+- name: adarga
+  registry: npm
+  version: 1.0.14
+  published: '2025-08-04'
+  reason: >-
+    Name collision, not Adarga. Description "Shields assets for smix", no
+    repository or homepage, maintainers unconnected to adarga.ai.
+- name: github.com/adarga-ai/coref
+  reason: >-
+    Archived repository ("BERT for Coreference Resolution"), last pushed
+    2021-08-25; no package published to any registry under an Adarga name.
+- name: github.com/adarga-ai/dateparser
+  reason: >-
+    Archived repository ("python parser for human readable dates"), last pushed
+    2021-07-22; nothing published to PyPI under an Adarga name (pypi.org/pypi/adarga/json
+    returns HTTP 404).
+sdk_count: 0
+package_count: 4
