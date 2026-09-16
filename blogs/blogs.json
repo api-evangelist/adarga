@@ -1,0 +1,21 @@
+{
+  "repo": "adarga",
+  "feeds": [
+    {
+      "source": "https://www.adarga.ai/news",
+      "feed_url": "https://www.adarga.ai/news/atom.xml",
+      "title": "",
+      "saved": 1,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.adarga.ai/case-studies",
+      "feed_url": "https://www.adarga.ai/case-studies",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-09-13T13:00:00Z"
+}
