@@ -5,7 +5,7 @@
       "source": "https://www.adarga.ai/news",
       "feed_url": "https://www.adarga.ai/news/atom.xml",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
     },
     {
@@ -14,8 +14,15 @@
       "title": "",
       "saved": 0,
       "method": "none"
+    },
+    {
+      "source": "https://www.adarga.ai/news/atom.xml",
+      "feed_url": "https://www.adarga.ai/news/atom.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-09-13T13:00:00Z"
+  "post_count": 4,
+  "fetched": "2026-09-19T20:17:39Z"
 }
