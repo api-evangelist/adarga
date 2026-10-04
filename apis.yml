@@ -30,7 +30,7 @@ tags:
 - Analytics
 - Natural Language Processing
 - Data Fusion
-- Machine-Learning
+- Machine Learning
 - United Kingdom
 tags_raw:
 - Company
@@ -43,6 +43,7 @@ tags_raw:
 - Data Fusion
 - Machine Learning
 - United Kingdom
+- Machine-Learning
 apis: []
 maintainers:
 - FN: Kin Lane
