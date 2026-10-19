@@ -28,3 +28,60 @@
     detected: '2026-10-15'
   status: not-a-workflow
   arazzo: null
+- slug: adarga-go-module-proxy
+  label: Go module proxy
+  partner_name: Go module proxy
+  category: official SDK (Go)
+  type: register
+  channel: package-registry
+  evidence: https://pkg.go.dev/github.com/adarga-ai/flyte-workflow-registration-operator
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Go module proxy (public registry JSON)
+    spec_file: null
+    language: Go
+    packages:
+    - name: github.com/adarga-ai/flyte-workflow-registration-operator
+      version: v1.0.0
+      released: '2025-01-14'
+      released_field: Time
+      lapsed: false
+      page: https://pkg.go.dev/github.com/adarga-ai/flyte-workflow-registration-operator
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/go-tigergraph
+      version: v0.1.0
+      released: '2023-06-14'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/go-tigergraph
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/kafka-topic-operator
+      version: v0.0.0-20230216095635-5f80ba5abfd4
+      released: '2023-02-16'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/kafka-topic-operator
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/pachyderm-pipeline-controller
+      version: v0.0.0-20210624220138-4ca9e167f20e
+      released: '2021-06-24'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/pachyderm-pipeline-controller
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null

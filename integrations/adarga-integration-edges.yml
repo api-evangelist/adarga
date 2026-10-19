@@ -24,6 +24,63 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-gov-cloud.py
   first_seen: '2026-10-15'
+- partner_name: Go module proxy
+  partner: null
+  partner_match: null
+  type: register
+  direction: provider-built
+  category: official SDK (Go)
+  evidence: https://pkg.go.dev/github.com/adarga-ai/flyte-workflow-registration-operator
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: Go module proxy (public registry JSON)
+    spec_file: null
+    language: Go
+    packages:
+    - name: github.com/adarga-ai/flyte-workflow-registration-operator
+      version: v1.0.0
+      released: '2025-01-14'
+      released_field: Time
+      lapsed: false
+      page: https://pkg.go.dev/github.com/adarga-ai/flyte-workflow-registration-operator
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/go-tigergraph
+      version: v0.1.0
+      released: '2023-06-14'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/go-tigergraph
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/kafka-topic-operator
+      version: v0.0.0-20230216095635-5f80ba5abfd4
+      released: '2023-02-16'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/kafka-topic-operator
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    - name: github.com/adarga-ai/pachyderm-pipeline-controller
+      version: v0.0.0-20210624220138-4ca9e167f20e
+      released: '2021-06-24'
+      released_field: Time
+      lapsed: true
+      page: https://pkg.go.dev/github.com/adarga-ai/pachyderm-pipeline-controller
+      repo_leg: github-org:adarga-ai
+      publisher_leg: org:adarga-ai
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 generated: '2026-10-15'
 method: searched
 source:
@@ -31,6 +88,13 @@ source:
 - https://govramp.org/program-participants
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
 checked:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
 - https://govramp.org/program-participants
+- https://proxy.golang.org
+- https://pypi.org/pypi
 - https://raw.githubusercontent.com/18F/fedramp-data/4b73d9247fd6360759960e4690e3ce4ca858e0fa/data/data.json
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-15/suppliers
